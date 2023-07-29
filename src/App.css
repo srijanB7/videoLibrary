@@ -1,0 +1,10 @@
+.dark-theme {
+    --primary-color: #fff;
+    --background-color: black;
+
+}
+
+.light-theme {
+    --primary-color: black;
+    --background-color: #fff;
+}

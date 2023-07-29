@@ -1,0 +1,33 @@
+.explore-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.explore-content {
+    display: flex;
+    
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 70%;
+}
+
+.right input {
+    height: 60px;
+    width: 800px;
+    padding: 8px;
+}
+
+.videos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}

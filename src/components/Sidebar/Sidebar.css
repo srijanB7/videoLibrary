@@ -1,0 +1,29 @@
+.sidebar-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin-top: 40px;  
+    width: fit-content; 
+    
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: var(--primary-color);
+    
+}
+
+.link:hover {
+    
+    font-weight: bold;
+}
+
+.sidebar-container a.active {
+    /* background-color: #7dd3fc; */
+    font-weight: bold;
+}
+

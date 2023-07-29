@@ -1,0 +1,19 @@
+.category-list-container nav{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.left {
+    width: 30%;
+}
+
+.right {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.category-list-content {
+    display: flex;
+}

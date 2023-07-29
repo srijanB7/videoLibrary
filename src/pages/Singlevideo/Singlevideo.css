@@ -1,0 +1,53 @@
+.single-video-container nav{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.left-single-video {
+    width: 20%;
+}
+
+.right-single-video {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.video-content {
+    display: flex;
+}
+
+.video-details {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    
+}
+
+.controls button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #3b82f6;
+    padding: 1rem;
+    height: 200px;
+}
+
+.modal-container h1 {
+    text-align: center;
+}
