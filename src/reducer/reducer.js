@@ -4,7 +4,7 @@ import { videos } from "../data/videoData";
 export const INITIAL_STATE = {
     categories: categories,
     videos: videos,
-    playLists: JSON.parse(localStorage.getItem("playlists")) ?? [[]],
+    playLists: JSON.parse(localStorage.getItem("playlists")) ?? [],
     notes: JSON.parse(localStorage.getItem("notes")) ?? [],
     watchLater: JSON.parse(localStorage.getItem("watchlater")) ?? [],
 

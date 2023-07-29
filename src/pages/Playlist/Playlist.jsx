@@ -3,6 +3,7 @@ import { useVideo } from "../../contexts/VideoContext";
 import { Modal } from "@mui/material";
 import "./Playlist.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const style = {
     position: "absolute",
@@ -22,17 +23,18 @@ export const Playlist = () => {
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
     const [playlistName, setPlayListName] = useState("");
-
+    console.log(playLists)
     const handleCreate = () => {
         const playlist = {
             id: playLists.length + 1,
             name: playlistName,
-            videos: []
+            videos: [],
+            src: "https://picsum.photos/200/300"
         }
 
         createPlayList(playlist);
         setPlayListName("");
-
+        handleClose();
     };
 
     return (
@@ -49,7 +51,15 @@ export const Playlist = () => {
                         Add
                     </button>
                     {
-                        
+                        playLists.length > 1 ?
+                        playLists?.map((playlist) => <div key={playlist.id}>
+                            <button>X</button>
+                            <Link to={`/playlist/${playlist.id}`}>
+                                <img src={playlist.src} />
+                                <p>{playlist.name}</p>
+                            </Link>
+                        </div>) :
+                        <p>Add something to playlist</p>
                     }
                 </div>
             </div>

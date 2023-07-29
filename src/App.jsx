@@ -7,6 +7,7 @@ import { Playlist } from "./pages/Playlist/Playlist";
 import { Watchlater } from "./pages/Watchlater/Watchlater";
 import { Categorylisting } from "./pages/Categorylisting/Categorylisting";
 import { Singlevideo } from "./pages/Singlevideo/Singlevideo";
+import { Singleplaylist } from "./pages/Singleplaylist/Singleplaylist";
 
 function App() {
   const { dark } = useTheme();
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/watchlater" element={<Watchlater />}/>
                 <Route path="/:category" element={<Categorylisting />}/>
                 <Route path="/video/:id" element={<Singlevideo />} />
+                <Route path="/playlist/:id" element={<Singleplaylist />}/>
             </Routes>
         </div>
     );
