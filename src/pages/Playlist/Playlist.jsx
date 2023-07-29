@@ -18,7 +18,7 @@ const style = {
 };
 
 export const Playlist = () => {
-    const { playLists, createPlayList } = useVideo();
+    const { playLists, createPlayList, deletePlayList } = useVideo();
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -37,6 +37,7 @@ export const Playlist = () => {
         handleClose();
     };
 
+
     return (
         <div className="playlists-container">
             <nav>
@@ -51,9 +52,9 @@ export const Playlist = () => {
                         Add
                     </button>
                     {
-                        playLists.length > 1 ?
+                        playLists.length > 0 ?
                         playLists?.map((playlist) => <div key={playlist.id}>
-                            <button>X</button>
+                            <button onClick={() => deletePlayList(playlist.id)}>X</button>
                             <Link to={`/playlist/${playlist.id}`}>
                                 <img src={playlist.src} />
                                 <p>{playlist.name}</p>

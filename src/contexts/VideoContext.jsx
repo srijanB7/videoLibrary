@@ -25,6 +25,9 @@ export const VideoProvider = ({ children }) => {
     function createPlayList(playlist) {
         dispatch({type: "add playlist", payload: playlist});
     }
+    function deletePlayList(id) {
+        dispatch({type: "delete playlist", payload: id});
+    }
 
     return (
         <VideoContext.Provider
@@ -34,7 +37,8 @@ export const VideoProvider = ({ children }) => {
                 addToWatchLater,
                 addNotes,
                 deleteNote,
-                createPlayList
+                createPlayList,
+                deletePlayList
             }}
         >
             {children}

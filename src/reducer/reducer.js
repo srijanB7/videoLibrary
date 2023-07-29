@@ -36,7 +36,12 @@ export function reducer(state, action) {
         }
 
         case "add playlist": {
-            const updatedPlaylists = [...state?.playLists, action.payload];
+            const updatedPlaylists = [...state.playLists, action.payload];
+            localStorage.setItem("playlists", JSON.stringify(updatedPlaylists));
+            return { ...state, playLists: updatedPlaylists};
+        }
+        case "delete playlist": {
+            const updatedPlaylists = state.playLists?.filter(playlist => playlist.id != action.payload);
             localStorage.setItem("playlists", JSON.stringify(updatedPlaylists));
             return { ...state, playLists: updatedPlaylists};
         }
